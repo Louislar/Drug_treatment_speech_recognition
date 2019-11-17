@@ -29,3 +29,10 @@
 ./pocketsphinx_continuous -hmm /home/wmlab/CMU_try/cmusphinx-zh-cn-5.2 -lm /home/wmlab/CMU_try/CMUsphinx-Demo-master/0506.lm -dict /home/wmlab/CMU_try/CMUsphinx-Demo-master/0506.dic
 ```
 - 問題圖片：![img02](https://raw.githubusercontent.com/Louislar/Drug_treatment_speech_recognition/master/Screenshot%20from%202019-11-11%2019-26-41.png)
+
+## 2019/11/17
+- 確認使用英文辨識指令可以運作（有接麥克風的情況下）
+- 指令：
+```
+./pocketsphinx_continuous
+```
