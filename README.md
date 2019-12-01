@@ -36,3 +36,9 @@
 ```
 ./pocketsphinx_continuous
 ```
+
+## 2019/12/01
+- 執行成功
+- 成功圖片：![img03](https://raw.githubusercontent.com/Louislar/Drug_treatment_speech_recognition/master/Screenshot%20from%202019-12-01%2017-48-48.png)
+- 完成使用python執行的程式了
+- 注意： lm跟dic檔案格式要改成跟原本的一樣才能正常預測。不能直接用網站上轉好的。
