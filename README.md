@@ -42,3 +42,16 @@
 - 成功圖片：![img03](https://raw.githubusercontent.com/Louislar/Drug_treatment_speech_recognition/master/Screenshot%20from%202019-12-01%2017-48-48.png)
 - 完成使用python執行的程式了
 - 注意： lm跟dic檔案格式要改成跟原本的一樣才能正常預測。不能直接用網站上轉好的。
+
+
+## 2019/12/03
+- 嘗試將python部份轉成exe可執行檔，用pyinstaller，再到windows上新開process call，傳輸部份用socket取代讀寫檔案I/O。
+
+
+## 2019/12/10
+
+- 發現python 2.7無法順利包裝成exe，所以改用socket連線送。
+- 目前順利寫出可連線的socket（python2.7），檔案為/home/wmlab/Downloads/Socket_programming/python-TCP/TCP-server-python27.py
+- 剩下在ubuntu的工作為將辨識的python碼與tcp的python碼結合。
+- 目前已經完成5樓連線測試
+- 接下來的任務為，整合server的python code讓他能夠，接到unity端的確認tcp後，回傳辨識結果。
