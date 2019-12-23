@@ -55,3 +55,26 @@
 - 剩下在ubuntu的工作為將辨識的python碼與tcp的python碼結合。
 - 目前已經完成5樓連線測試
 - 接下來的任務為，整合server的python code讓他能夠，接到unity端的確認tcp後，回傳辨識結果。
+
+
+## 2019/12/23
+
+- 解決了之前編譯成exe後會報錯的問題。
+- 問題描述：直接使用pyinstaller編譯完後，在ubuntu上用以下方式在command line上執行會報錯
+```
+./pythonspeechrecog
+```
+- 錯誤碼：
+```
+ImportError: /tmp/_MEIIG7r7r/pocketsphinx.so: cannot open shared object file: No such file or directory
+[12438] Failed to execute script speechrecogserver
+```
+- 參考網站：
+- 1. https://blog.xuite.net/o1o1o1o1o/blog/396404852-Pyinstaller%E5%B0%87python%E7%A8%8B%E5%BC%8F%E6%89%93%E5%8C%85%E7%82%BA%E4%B8%80%E5%80%8B%E5%8F%AF%E5%9F%B7%E8%A1%8C%E6%AA%94
+- (狀況D：Runtime執行時少了某library)
+- 2. https://stackoverflow.com/questions/49085970/no-such-file-or-directory-error-using-pyinstaller-and-scrapy
+- 3. https://pythonhosted.org/PyInstaller/spec-files.html
+
+- 缺少的兩個.so檔案，從原本下載的安裝包找，直接搜尋名子找會比較快(sphinxpocket.so, sphinxbase.so) 
+
+- 解法：依照參考網站1的方式修改.spec檔案，注意！一定要依照參考網站3的格式做修改。
